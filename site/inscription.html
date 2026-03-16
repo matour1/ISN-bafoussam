@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Institut de Formation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="icon" href="images-ISN/logo-ISN.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: right; justify-content: right;">
+                <img src="images-ISN/logo-ISN.png" alt="Institut de Formation" class="logo-img">
+                            <h4>CENTRE DE FORMATION PROFESSIONNELLE AUX METIERS DU NUMERIQUE ET PARAMETICAL(CFP -MNP)</h4>
+
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="formations.html" class="nav-link">Formations</a></li>
+                    <li><a href="inscription.html" class="nav-link active">Inscription</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO INSCRIPTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" style="background-image: linear-gradient(90deg, #ffffff 10%, #ff7a00 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Processus d'Inscription</h1>
+            <p class="hero-subtitle">Commencez votre parcours de formation en quelques clics.</p>
+        </div>
+        <img src="images-ISN/fly cfpmn.jpg" alt="Flyer principal" class="hero-image">    
+    </section>
+
+    <!-- FORMULAIRE INSCRIPTION -->
+    <section class="section inscription">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Formulaire d'Inscription</h2>
+            <form class="inscription-form" action="#" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" name="nom" required placeholder="nom complet">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required placeholder="prenom">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" required placeholder="+237 6xx xxx xxx">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="formation">Formation souhaitée</label>
+                    <select id="formation" name="formation" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="numerique">Métiers du Numérique</option>
+                        <option value="paramedical">Métiers Paramédicaux</option>
+                        <option value="langues">Langues</option>
+                    </select>
+                </div>
+                <div class="form-group filiere">
+                 <div class="form-group">
+                    <label for="formation">Filiere du numerique</label>
+                    <select id="formation" name="formation" required>
+                        <option value="">Choisir une filiere</option>
+                        <option value="infographie">Inforgraphie</option>
+                        <option value="montage audiovisuel">Montage Audiovisuel</option>
+                        <option value="Developement web et mobile">Developement web et mobile</option>
+                         <option value="mr">Maintenance des Reseaux informatique</option>
+                        <option value="MI">Maitenance informatique</option>
+                        <option value="wm">Web master</option>
+                         <option value="MD">Maketing Digital</option>
+                        <option value="sb">Secretariat bureautique</option>
+                        <option value="SC">secretariat comptable</option>
+                         <option value="SD">Secretariat de direction</option>
+                        <option value="Ci">comptabilite informatise</option>
+                        
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="formation">Filiere paramedicale</label>
+                    <select id="formation" name="formation" required>
+                        <option value="">Choisir une filiere</option>
+                        <option value="auxiliere de vie">Auxiliaire de vie</option>
+                        <option value="vp">Vendeur de Pharmatie</option>
+                        <option value="AS">Aide soignant</option>
+                         <option value="DM">Delegue medical</option>
+                        <option value="SM">secretariat medical</option>
+                        <option value="ACB">Aide chimiste Biologiste/ Atms</option>
+                    </select>
+                </div>
+               </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="facultatif"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large"><i class="fas fa-check"></i> Confirmer l'inscription</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" style="border: 1px 2px 2px double rgba(0,0,0,0.4);">
+                    <i class="fas fa-calendar-alt" style="font-size: 60px;color: orange;"> 12mois</i>
+                    <p>09+03mois de stage</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Institut de Formation</h3>
+                    <p>Centre de formation aux métiers du numérique et paramédical.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"> </i> Bafoussam <span style="color: rgba(141, 94, 7, 0.842);font-size: 24px; font-weight: bold;">(FACE CAPLAMI)</span></p>
+                    <p><i class="fas fa-phone"> </i> (+237) 659717141 /682628659 </p>
+                    <p><i class="fas fa-envelope"> </i> isn-bafoussam@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Réseaux Sociaux</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2026 Institut de Formation. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
