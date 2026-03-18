@@ -452,62 +452,147 @@ button:hover{
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .mobile-toggle {
-        display: none;
+    .logo {
+        margin-right: 0;
+        margin-left: 0;
+        gap: 10px;
+        width: auto;
+        flex-shrink: 1;
+        font-size: 14px;
+    }
+    
+    .header {
+        padding: 0.5rem 0;
+    }
+    
+    .header .container {
+    
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 1rem;
+        position: relative;
+    }
+    
+    
+    .logo h4 {
+        font-size: 12px;
+        
     }
     
     .nav-list {
         display: flex;
-        position: relative;
+        position: absolute;
+        font-size: 16px;
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    
+        background: whitesmoke;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         
-    }
-    .hero-content{
-        padding-top: 40%;
-        filter: blur(-30px);
+        z-index: 99;
     }
     
-    
-    .nav-list.active {
+    .nav-list .active {
         display: flex;
+        animation: slideDown 0.3s ease;
+        font-size: 14px;
     }
+    
+    .nav-link {
+        padding: 1rem;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        width: 100%;
+    }
+    
+    
     
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-left: 0;
+        min-height: 70vh;
+        margin-top: 50px
     }
     
+    .hero-content {
+        margin-left: 0;
+        padding: 2rem 1rem;
+        width: 100%;
+        filter: none;
+        padding-top: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 24px ;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
     
     .hero-image {
-        position: relative;
+        position: relative ;
         width: 100%;
         height: 40vh;
-        margin-top: 2rem;
-        top: -200px;
+        top: 0;
+        margin-top: 1rem;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+    
+    .section-subtitle, .card-text, .feature p {
+        font-size: 16px;
+    }
+    
+    .card {
+        padding: 0.5rem;
+    }
+    
+    .card-image {
+        height: 180px !important;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .feature-icon, .contact-icon {
+        font-size: 2rem;
     }
     
     .form-row {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 16px;
     }
     
     .cards-grid,
-    .features-grid {
+    .features-grid,
+    .diplomes-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
-    .header .container {
-        padding: 1rem;
-    }
-    .logo, .nav{
-        margin: 0;
+    .section {
+        padding: 2rem 1rem;
     }
 }
 
