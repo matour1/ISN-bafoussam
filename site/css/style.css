@@ -83,19 +83,7 @@ body {
     background: #1e40af;
 }
 
-.mobile-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
 
-.mobile-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    transition: 0.3s;
-}
 
 /* HERO */
 .hero {
@@ -126,6 +114,8 @@ body {
     padding: 2rem;
     margin-left: 50px;
 }
+
+
 
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -181,6 +171,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    
 }
 
 .card {
@@ -190,6 +181,9 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     transition: all 0.4s ease;
     border: 2px solid rgba(36, 34, 34, 0.2);
+    align-items: center;
+    width: 100%;
+    
 
 }
 
@@ -198,10 +192,17 @@ body {
     box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
 
-.card-image {
+.card-image{
+    height: 533px;
     width: 100%;
-    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgb(148, 129, 144);
+}
+.card-image:hover{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
 }
 
 .card-content {
@@ -218,6 +219,44 @@ body {
     color: #6b7280;
     margin-bottom: 1.5rem;
 }
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #007BFF;
+    outline: none;
+    margin-top: 10px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+summary::before {
+    content: "▶ ";
+    transition: 0.3s;
+}
+
+
+details[open] summary::before {
+    content: "▼ ";
+}
+
+details[open] summary {
+    color: #ff6600;
+}
+
+
+details p {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+
+
 
 /* FEATURES */
 form{
@@ -396,6 +435,7 @@ form{
     margin: 0 auto;
 }
 
+
 .formation-detail h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -441,11 +481,7 @@ button:hover{
     color:#f59e0b ;
      
 }
-.card-image{
-    height: 400pt;
-    border-radius: 10px;
-    border: 2px solid rgb(180, 173, 173);
-}
+
 .card{
     padding: 10px;
 }
@@ -553,14 +589,17 @@ button:hover{
     }
     
     .card {
-        padding: 0.5rem;
+        padding: 0.5rem
     }
     
     .card-image {
-        height: 180px !important;
-        object-fit: cover;
+        height: 533px;
+        width: 362px;
+        object-fit:cover;
         border-radius: 10px 10px 0 0;
     }
+    
+
     
     .card-content {
         padding: 1rem;
