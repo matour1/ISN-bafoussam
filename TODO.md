@@ -1,14 +1,1 @@
-# TODO - Amélioration Site ISN (Élément par Élément)
-
-## Plan Approuvé
-- [x] **Étape 1** : Corriger toutes les fautes d'orthographe (priorité utilisateur) - COMPLÈTE (4 fichiers -corrected)
-- [ ] **Étape 2** : Corriger problèmes de balises HTML et IDs doublons (formulaires)
-- [ ] **Étape 3** : Fix navigation mobile
-- [ ] **Étape 4** : Optimisations images/lazy loading
-- [ ] **Étape 5** : Tests & validation
-
-**Status** : Orthographe OK. En cours : Correction balises (ex: formulaires index/inscription, IDs uniques déjà dans -corrected).
-
-*Dernière mise à jour : Balises en cours*
-
-
+# TODO: Fix HTML Tag and Validity Issues\n\n## Plan Steps:\n1. [ ] Create this TODO.md\n2. [ ] Fix site/index.html form structure and duplicate IDs\n3. [ ] Fix site/inscription.html nested selects and IDs\n4. [ ] Fix site/formations.html duplicate section IDs\n5. [ ] Fix site/contact.html input type\n6. [ ] Validate all HTML files\n7. [ ] Test in browser\n8. [ ] Complete task\n\n**Status:** Starting fixes. No unclosed tags found originally.
