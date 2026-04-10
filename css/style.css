@@ -482,6 +482,58 @@ button:hover{
     padding: 10px;
 }
 
+/* style des information  */
+
+
+.info{
+    padding: 50px;
+    margin: 20px 0;
+}
+
+.info h1{
+    text-align: center;
+}
+
+.info span{
+    color: orange;
+}
+.info .logo-text{
+    font-size: 18px;
+}
+
+/* slider  */
+
+.slider{
+    width: 95%;
+    border: none;
+    display: flex;
+    margin-top: 20px;
+    /* overflow-x: auto; */
+}
+
+.slider::-wibkit-scrollbar{
+    display: none;
+}
+.slider .container-slide .card{
+    height: 500px;
+    width: 400px;
+}
+
+.container-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation: spin 30s ease-in-out infinite ;
+
+}
+@keyframes spin {
+    from{
+        translate: 0;
+    }
+    to{translate: -100%;}
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .logo {
