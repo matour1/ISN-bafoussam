@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription - Institut de Formation</title>
+<meta name="description" content="Centre de formation professionnelle agréé MINEFOP à Bafoussam (face CAPLAMI). Formations certifiantes DQP/CQP : développement web, aide-soignant, langues étrangères, génie civil. Inscrivez-vous dès maintenant!">
+    <meta name="keywords" content="formation numérique Bafoussam, centre MINEFOP Bafoussam, développement web Bafoussam, formation paramédical Bafoussam, ISN Bafoussam">
+    <title>inscription-Institut Supérieur du Numérique</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="ISN Bafoussam - Centre de formation agréé MINEFOP">
+    <meta property="og:description" content="Formations professionnelles en numérique, paramédical et langues à Bafoussam. Diplômes DQP/CQP reconnus.">
+    <meta property="og:image" content="images-ISN/logo-ISN.png">
+    <meta property="og:url" content="https://isn-bafoussam.vercel.app">
+    <meta property="og:type" content="website">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ISN Bafoussam - Formations certifiantes">
+    <meta name="twitter:description" content="Développeur web, aide-soignant, anglais... Inscription ouverte!">
+    <meta name="twitter:image" content="images-ISN/logo-ISN.png">
+    <link rel="canonical" href="https://isn-bafoussam.vercel.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
      <link rel="icon" href="images-ISN/logo-ISN.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Institut Supérieur du Numérique ISN-Bafoussam",
+      "alternateName": "CFP-MN",
+      "url": "https://isn-bafoussam.vercel.app/inscription.html",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Face CAPLAMI",
+        "addressLocality": "Bafoussam",
+        "addressRegion": "Ouest",
+        "addressCountry": "CM"
+      },
+      "telephone": "+237659717141",
+      "email": "isn-bafoussam@gmail.com"
+    }
+    </script>
+    <title>Inscription - Institut de Formation</title>
+    
 
 </head>
 <body>
@@ -69,43 +104,59 @@
                 </div>
                 <div class="form-group">
                     <label for="formation">Formation souhaitée</label>
-                    <select id="formation" name="formation" required>
+                    <select id="formation_principal" name="formation" required>
                         <option value="">Sélectionnez</option>
                         <option value="numerique">Métiers du Numérique</option>
                         <option value="paramedical">Métiers Paramédicaux</option>
                         <option value="langues">Langues</option>
                     </select>
                 </div>
-                <div class="form-group filiere">
+                <div style="border: 1px solid rgb(167, 165, 165); padding: 10px;border-radius: 10px; margin: 15px;">
+                    <h6 style="color: #524b4b;">INFO: selection en fonction du type de formation choisir
+                        NB: tu peut choisir la langue en deux option. exemple: infographie et anglais
+                    </h6>
+                    <div class="form-group filiere">
                  <div class="form-group">
                     <label for="formation">Filiere du numerique</label>
-                    <select id="formation" name="formation" required>
+                    <select id="formation_numerique" name="formation">
                         <option value="">Choisir une filiere</option>
                         <option value="infographie">Inforgraphie</option>
                         <option value="montage audiovisuel">Montage Audiovisuel</option>
                         <option value="Developement web et mobile">Developement web et mobile</option>
-                         <option value="mr">Maintenance des Reseaux informatique</option>
-                        <option value="MI">Maitenance informatique</option>
-                        <option value="wm">Web master</option>
-                         <option value="MD">Maketing Digital</option>
-                        <option value="sb">Secretariat bureautique</option>
-                        <option value="SC">secretariat comptable</option>
-                         <option value="SD">Secretariat de direction</option>
-                        <option value="Ci">comptabilite informatise</option>
+                         <option value="maintemance reseaux">Maintenance des Reseaux informatique</option>
+                        <option value="Maintanance informatique">Maitenance informatique</option>
+                        <option value="web master">Web master</option>
+                         <option value="Maketing digitale">Maketing Digital</option>
+                        <option value="secretariat bureautique">Secretariat bureautique</option>
+                        <option value="Secretariat comptable">secretariat comptable</option>
+                         <option value="Secretariat direction">Secretariat de direction</option>
+                        <option value="Comptabilite informatique">comptabilite informatise</option>
                         
                     </select>
                 </div>
                  <div class="form-group">
                     <label for="formation">Filiere paramedicale</label>
-                    <select id="formation" name="formation" required>
+                    <select id="formation_paramedicale" name="formation">
                         <option value="">Choisir une filiere</option>
                         <option value="auxiliere de vie">Auxiliaire de vie</option>
-                        <option value="vp">Vendeur de Pharmatie</option>
-                        <option value="AS">Aide soignant</option>
-                         <option value="DM">Delegue medical</option>
-                        <option value="SM">secretariat medical</option>
-                        <option value="ACB">Aide chimiste Biologiste/ Atms</option>
+                        <option value="vvendeur en pharmacie">Vendeur de Pharmatie</option>
+                        <option value="Aide soignant">Aide soignant</option>
+                         <option value="Delegue medical">Delegue medical</option>
+                        <option value="Secretariat medical">secretariat medical</option>
+                        <option value="Aide chimiste ">Aide chimiste Biologiste/ Atms</option>
                     </select>
+                </div>
+                 <div class="form-group">
+                    <label for="langue">Cour de langue</label>
+                    <select id="Cour-langue" name="langue">
+                        <option value="">Choisir la langue</option>
+                        <option value="anglais">Anglaire</option>
+                        <option value="allemand">allemand</option>
+                        <option value="espanol">Espanol</option>
+                         <option value="italian">italian</option>
+                        
+                    </select>
+                </div>
                 </div>
                </div>
                 <div class="form-group">
@@ -150,6 +201,11 @@
             </div>
         </div>
     </footer>
+    <a href="https://wa.me/237659717141" class="whatsapp-float" target="_blank" aria-label="WhatsApp ISN">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="js/main.js" defer></script>
+    <script src="api/inscription.js"></script>
 </body>
 </html>
 
