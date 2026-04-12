@@ -7,6 +7,12 @@ document.querySelector(".inscription-form").addEventListener("submit", function(
     let email = document.getElementById("email")?.value || "";
     let telephone = document.getElementById("telephone")?.value || "";
 
+    // Validation basique
+    if (!nom || !telephone) {
+        alert("Veuillez remplir au moins le nom et le téléphone.");
+        return;
+    }
+
     // Formation principale (pour formulaire index)
     let formationIndex = document.getElementById("formation")?.value || "";
     // Formation principale (pour formulaire inscription.html)
@@ -22,6 +28,12 @@ document.querySelector(".inscription-form").addEventListener("submit", function(
     let formation = formationPrincipal || formationIndex || "Non précisée";
     // Déterminer la filière choisie
     let filiere = filiereNum || filierePara || langue || "Non précisée";
+
+    // Désactiver le bouton pendant le traitement
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Préparation...';
+    submitBtn.disabled = true;
 
     // Numéro WhatsApp (format international sans +)
     let numero = "237659717141"; // 👉 remplace par ton numéro
@@ -39,6 +51,14 @@ document.querySelector(".inscription-form").addEventListener("submit", function(
     // Générer lien WhatsApp
     let url = `https://wa.me/${numero}?text=${encodeURIComponent(texte)}`;
 
-    // Ouvrir WhatsApp
-    window.open(url, "_blank");
+    // Petit délai pour montrer le feedback
+    setTimeout(() => {
+        // Ouvrir WhatsApp
+        window.open(url, "_blank");
+        // Réactiver le bouton
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        // Optionnel: réinitialiser le formulaire
+        // e.target.reset();
+    }, 500);
 });
