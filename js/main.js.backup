@@ -1,4 +1,4 @@
-﻿// main.js - ISN Bafoussam Interactive Features
+// main.js - ISN Bafoussam Interactive Features
 // Modern, performant JS for forms, navigation, WhatsApp
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,15 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Form validation & submission
   const forms = document.querySelectorAll('form');
   forms.forEach(form => {
-    // Skip forms that have custom handlers (contact & inscription)
-    if (form.classList.contains('contact-form') || form.classList.contains('inscription-form')) {
-      return;
-    }
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
       const formData = new FormData(form);
-      const submitBtn = form.querySelector('button[type="submit"]');
+      const submitBtn = form.querySelector('button[type=\"submit\"]');
       const originalText = submitBtn.innerHTML;
       
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
@@ -45,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Smooth scrolling for nav links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  document.querySelectorAll('a[href^=\"#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
@@ -78,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    document.querySelectorAll('img[loading=\"lazy\"]').forEach(img => {
       imageObserver.observe(img);
     });
   }
@@ -102,3 +98,4 @@ document.addEventListener('DOMContentLoaded', function() {
     animateObserver.observe(el);
   });
 });
+
