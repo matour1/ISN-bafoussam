@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form.classList.contains('contact-form') || form.classList.contains('inscription-form')) {
       return;
     }
-    // Skip forms with action="#" or empty action (no backend)
-    if (form.action === '#' || form.action === '' || form.action.includes('#')) {
-      return;
-    }
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
